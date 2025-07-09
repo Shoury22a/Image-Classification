@@ -43,6 +43,7 @@ SVM was noted to perform best among the models during experimentation.
 
 
 
+
 ## Libraries:
 
 OpenCV for image loading
@@ -62,6 +63,8 @@ Pillow for image dimension analysis
 
 Intended for integration with a Streamlit web app that takes an image and shows the predicted leaf condition.
 
+## Web Page
 
-![Screenshot 2025-07-09 150053](https://github.com/user-attachments/assets/5aa321d4-1b78-4b5b-bf7a-fe0514a5f616)
+![image](https://github.com/user-attachments/assets/3578cce5-31d9-401c-8dae-a4fdbcee4afe)
+
 
