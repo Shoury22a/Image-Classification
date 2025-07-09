@@ -61,13 +61,12 @@ st.markdown('<div class="subtitle">Upload a plant leaf image to check its health
 
 # ---------------------- Sidebar ----------------------
 with st.sidebar:
-    st.image("https://cdn.pixabay.com/photo/2016/03/05/22/54/leaf-1231616_1280.jpg", use_column_width=True)
-    st.markdown("### 🧠 About the Project")
+    st.image("https://cdn.pixabay.com/photo/2016/03/05/22/54/leaf-1231616_1280.jpg", use_container_width=True)
     st.write("This project uses HSV-based histogram features and a Random Forest model to detect plant leaf diseases. Built using Python, OpenCV, and Streamlit.")
     st.markdown("### 🔍 Classes Detected")
     st.write(", ".join(label_binarizer.classes_))
     st.markdown("---")
-    st.caption("Developed by [Your Name]")
+    st.caption("Developed by Shourya Saxena")
 
 # ---------------------- File Upload ----------------------
 uploaded_file = st.file_uploader("📷 Upload a leaf image", type=['jpg', 'jpeg', 'png'])
