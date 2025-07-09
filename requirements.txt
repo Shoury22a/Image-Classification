@@ -1,7 +1,12 @@
-streamlit
-joblib
 numpy
-pillow
-scikit-learn
 pandas
 matplotlib
+seaborn
+plotly
+cv2
+sklearn
+tqdm
+Pillow
+pickle
+os
+collections
