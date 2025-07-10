@@ -1,90 +1,87 @@
-Plant Leaf Image Classification using Traditional Machine Learning
-Objective
-Classify plant leaf images into one of the following four categories:
+# Plant Leaf Image Classification using Traditional Machine Learning
 
-Healthy
+## Objective  
+Classify plant leaf images into one of the following four categories:  
+- Healthy  
+- Multiple Diseases  
+- Rust  
+- Scab  
 
-Multiple Diseases
+This project uses handcrafted features and traditional machine learning algorithms (SVM, Random Forest, Gradient Boosting) instead of deep learning approaches.
 
-Rust
+---
 
-Scab
+## Dataset  
+- **Files Used**: `train.csv`, `test.csv`, `sample_submission.csv`, and a folder named `images/`
+- **Input**: JPG images of plant leaves  
+- **Labels**: Multi-class classification — `healthy`, `rust`, `scab`, and `multiple_diseases`
 
-This project uses handcrafted features and traditional machine learning algorithms (SVM, Random Forest, Gradient Boosting) instead of deep learning.
+---
 
-Dataset
-Files Used: train.csv, test.csv, sample_submission.csv, and a folder named images/
+## Features Extracted  
+- Raw pixel values  
+- Color histograms  
+- Image dimensions (height and width)  
 
-Input: JPG images of plant leaves
+> Note: Texture and shape-based handcrafted features are **not** explicitly used.
 
-Labels: Multi-class classification labels (healthy, rust, scab, multiple_diseases)
+---
 
-Features Extracted
-Raw pixel values
+## Models Considered
 
-Color histograms
+### 1. Support Vector Machine (SVM)
+| Kernel      | Accuracy |
+|-------------|----------|
+| Linear      | 0.51     |
+| RBF         | 0.55     |
+| Polynomial  | **0.56** (Best among SVM kernels)
 
-Image dimensions (height, width)
+### 2. Gradient Boosting Classifier
+- Accuracy: 0.79
 
-Note: Texture and shape-based handcrafted features are not explicitly used.
+### 3. Random Forest Classifier
+- Accuracy: **0.80**
+- Weighted F1 Score: **0.77**
 
-Models Considered
-1. Support Vector Machine (SVM)
-Linear Kernel: Accuracy = 0.51
+---
 
-RBF Kernel: Accuracy = 0.55
+## Final Model: Random Forest
+Chosen due to its balanced performance and highest accuracy.  
+- **Accuracy**: 0.80  
+- **Weighted F1 Score**: 0.77  
+- Model saved as `.pkl` for deployment and inference.
 
-Polynomial Kernel: Accuracy = 0.56 (Best among SVM kernels)
+---
 
-2. Gradient Boosting Classifier
-Accuracy = 0.79
+## Libraries Used  
+- `OpenCV` – for image loading  
+- `NumPy`, `Pandas` – for data handling  
+- `Matplotlib`, `Seaborn`, `Plotly` – for visualizations  
+- `scikit-learn` – for ML models and evaluation  
+- `tqdm` – for progress tracking  
+- `Pillow` – for analyzing image dimensions
 
-3. Random Forest Classifier
-Accuracy = 0.80
+---
 
-Weighted F1 Score = 0.77
+## Output  
+- Trained model `.pkl` files generated for each algorithm  
+- Ready for integration with a Streamlit web application to classify plant leaf conditions from uploaded images
 
-Final Model: Random Forest
-Selected based on its balanced performance and highest overall accuracy.
+---
 
-Accuracy: 0.80
+## How to Run the Web Application  
 
-F1 Score (Weighted): 0.77
-
-Saved as .pkl file for future inference and web integration.
-
-Libraries Used
-OpenCV – Image loading and processing
-
-NumPy, Pandas – Data handling
-
-Matplotlib, Seaborn, Plotly – Visualization
-
-scikit-learn – ML algorithms and evaluation
-
-tqdm – Progress bar tracking
-
-Pillow – Image metadata and size analysis
-
-Output
-Model .pkl files generated for SVM, Random Forest, and Gradient Boosting
-
-Designed for use with a Streamlit web app to predict the condition of a plant leaf from an uploaded image
-
-How to Run the Web Application
 To run the Streamlit app locally, follow these steps:
 
-bash
-Copy
-Edit
-# 1. Clone the repository
+```bash
+# Step 1: Clone the repository
 git clone https://github.com/Shoury22a/Image-Classifiication-
 
-# 2. Navigate into the project directory
+# Step 2: Navigate to the project directory
 cd Image-Classification
 
-# 3. Install all dependencies
+# Step 3: Install required dependencies
 pip install -r requirements.txt
 
-# 4. Launch the web app
+# Step 4: Launch the Streamlit app
 streamlit run app1.py
