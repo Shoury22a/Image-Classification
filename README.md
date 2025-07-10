@@ -55,8 +55,11 @@ Accuracy=0.80
 
 
 # Final Model
-## Random Forest
+### Random Forest
 Accuracy=0.80
+Weighted F1 Score=0.77
+Chosen for it being relatively balanced and accurate
+
 
 
 
@@ -78,6 +81,16 @@ Pillow for image dimension analysis
 .pkl files generated for each model for future inference.
 
 Intended for integration with a Streamlit web app that takes an image and shows the predicted leaf condition.
+
+#How to run the Web Page?
+To run the Streamlit app locally, use the following commands:
+
+git clone (https://github.com/Shoury22a/Image-Classifiication-)
+cd Image-Classification
+
+pip install -r requirements.txt
+streamlit run app1.py
+
 
 # Web Page
 
