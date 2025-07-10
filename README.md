@@ -89,5 +89,6 @@ streamlit run app1.py
 
 ```
 ## Web Page
-[Screenshot 2025-07-09 162139](https://github.com/user-attachments/assets/a4c893e9-4d03-4c20-9c45-5c208d742816)
+![Screenshot 2025-07-09 162139](https://github.com/user-attachments/assets/5df48bac-9aec-46ba-96c1-a2132f91a74b)
+
 
