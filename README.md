@@ -85,3 +85,8 @@ pip install -r requirements.txt
 
 # Step 4: Launch the Streamlit app
 streamlit run app1.py
+
+
+## Web Page
+![Screenshot 2025-07-09 162139](https://github.com/user-attachments/assets/a4c893e9-4d03-4c20-9c45-5c208d742816)
+
