@@ -40,11 +40,11 @@ SVM was noted to perform best among the models during experimentation.
 ## Performance
 
 ### SVM
-#### Kernel = Linear
+- #### Kernel = Linear
 Accuracy=0.51
-#### Kernel=rbf
+- #### Kernel=rbf
 Accuracy=0.55
-#### Kernel=Poly
+- #### Kernel=Poly
 Accuracy=0.56
 
 ### Gradient Boosting
