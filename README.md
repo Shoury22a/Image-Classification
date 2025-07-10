@@ -28,8 +28,8 @@ Image size and dimensions (height, width)
 
 Texture and shape-based handcrafted features are not used explicitly in this notebook.
 
-## Models Used
-Support Vector Machine (SVM) with polynomial kernel
+## Models Considered 
+Support Vector Machine (SVM) with polynomial kernel(Based on accuracy of  the three kernels of SVM)
 
 Random Forest Classifier
 
@@ -39,7 +39,19 @@ SVM was noted to perform best among the models during experimentation.
 
 ## Performance
 
+### SVM
+#### Kernel = Linear
+Accuracy=0.51
+#### Kernel=rbf
+Accuracy=0.55
+#### Kernel=Poly
+Accuracy=0.56
 
+### Gradient Boosting
+Accuracy=0.79
+
+### Random Forest
+Accuracy=0.80
 
 
 
