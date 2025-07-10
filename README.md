@@ -54,6 +54,10 @@ Accuracy=0.79
 Accuracy=0.80
 
 
+# Final Model
+## Random Forest
+Accuracy=0.80
+
 
 
 # Libraries:
