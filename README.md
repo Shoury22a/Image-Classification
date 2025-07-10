@@ -1,6 +1,6 @@
 Plant Leaf Image Classification using Traditional Machine Learning
-# Objective
-Classify plant leaf images into one of four categories:
+Objective
+Classify plant leaf images into one of the following four categories:
 
 Healthy
 
@@ -10,90 +10,81 @@ Rust
 
 Scab
 
-This project uses handcrafted features and traditional ML algorithms (SVM, Random Forest, Gradient Boosting) instead of deep learning.
+This project uses handcrafted features and traditional machine learning algorithms (SVM, Random Forest, Gradient Boosting) instead of deep learning.
 
-# Dataset
+Dataset
 Files Used: train.csv, test.csv, sample_submission.csv, and a folder named images/
 
 Input: JPG images of plant leaves
 
-Labels: Multi-class labels from the dataset (healthy, rust, etc.)
+Labels: Multi-class classification labels (healthy, rust, scab, multiple_diseases)
 
-# Features Extracted
+Features Extracted
 Raw pixel values
 
 Color histograms
 
-Image size and dimensions (height, width)
+Image dimensions (height, width)
 
-Texture and shape-based handcrafted features are not used explicitly in this notebook.
+Note: Texture and shape-based handcrafted features are not explicitly used.
 
-# Models Considered 
-Support Vector Machine (SVM) with polynomial kernel(Based on accuracy of  the three kernels of SVM)
+Models Considered
+1. Support Vector Machine (SVM)
+Linear Kernel: Accuracy = 0.51
 
-Random Forest Classifier
+RBF Kernel: Accuracy = 0.55
 
-Gradient Boosting Classifier
+Polynomial Kernel: Accuracy = 0.56 (Best among SVM kernels)
 
-SVM was noted to perform best among the models during experimentation.
+2. Gradient Boosting Classifier
+Accuracy = 0.79
 
-# Performance
+3. Random Forest Classifier
+Accuracy = 0.80
 
-## 1)SVM
-- #### Kernel = Linear
-Accuracy=0.51
-- #### Kernel=rbf
-Accuracy=0.55
-- #### Kernel=Poly
-Accuracy=0.56
+Weighted F1 Score = 0.77
 
-## 2)Gradient Boosting
-Accuracy=0.79
+Final Model: Random Forest
+Selected based on its balanced performance and highest overall accuracy.
 
-## 3)Random Forest
-Accuracy=0.80
+Accuracy: 0.80
 
+F1 Score (Weighted): 0.77
 
-# Final Model
-### Random Forest
-Accuracy=0.80
-Weighted F1 Score=0.77
-Chosen for it being relatively balanced and accurate
+Saved as .pkl file for future inference and web integration.
 
+Libraries Used
+OpenCV – Image loading and processing
 
+NumPy, Pandas – Data handling
 
+Matplotlib, Seaborn, Plotly – Visualization
 
-# Libraries:
+scikit-learn – ML algorithms and evaluation
 
-OpenCV for image loading
+tqdm – Progress bar tracking
 
-NumPy, Pandas for data handling
+Pillow – Image metadata and size analysis
 
-Matplotlib, Seaborn, Plotly for visualization
+Output
+Model .pkl files generated for SVM, Random Forest, and Gradient Boosting
 
-scikit-learn for ML models
+Designed for use with a Streamlit web app to predict the condition of a plant leaf from an uploaded image
 
-tqdm for progress tracking
+How to Run the Web Application
+To run the Streamlit app locally, follow these steps:
 
-Pillow for image dimension analysis
+bash
+Copy
+Edit
+# 1. Clone the repository
+git clone https://github.com/Shoury22a/Image-Classifiication-
 
-# Output
-.pkl files generated for each model for future inference.
-
-Intended for integration with a Streamlit web app that takes an image and shows the predicted leaf condition.
-
-#How to run the Web Page?
-To run the Streamlit app locally, use the following commands:
-
-git clone (https://github.com/Shoury22a/Image-Classifiication-)
+# 2. Navigate into the project directory
 cd Image-Classification
 
+# 3. Install all dependencies
 pip install -r requirements.txt
+
+# 4. Launch the web app
 streamlit run app1.py
-
-
-# Web Page
-
-![image](https://github.com/user-attachments/assets/3578cce5-31d9-401c-8dae-a4fdbcee4afe)
-
-
